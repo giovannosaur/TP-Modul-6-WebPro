@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bermain dengan Warna</title>
+    <link rel="stylesheet" href="style2.css">
+    <!-- IMPORT CDN DISINI -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Bermain dengan Warna</h1>
+
+    <div>
+        <button onclick="" id="tombolMerah">Merah</button>
+        <button onclick="" id="tombolBiru">Biru</button>
+        <button onclick="" id="tombolKuning">Kuning</button>
+    </div>
+
+    <div id="kotakWarna"></div>
+
+    <div>
+        <button id="sembunyikanKotak">Sembunyikan Kotak</button>
+        <button id="tampilkanKotak">Tampilkan Kotak</button>
+    </div>
+
+    <p>Klik tombol warna untuk mengubah warna kotak.</p>
+    <p>Gunakan tombol Sembunyikan dan Tampilkan untuk menyembunyikan dan menampilkan kotak.</p>
+
+	<script>
+        //code disini.. pastikan menggunakan JQUERY
+		$(document).ready(function() {
+            // ubah warna jadi kotak merah, biru atau kuning.
+            $("#tombolMerah").click(function() {
+                $("#kotakWarna").css("background-color", "red");
+            });
+            $("#tombolBiru").click(function() {
+                $("#kotakWarna").css("background-color", "blue");
+            });
+            $("#tombolKuning").click(function() {
+                $("#kotakWarna").css("background-color", "yellow");
+            });
+
+            // menyembunyikan kotak.
+            $("#sembunyikanKotak").click(function() {
+                $("#kotakWarna").hide();
+            });
+
+            // tampilkan kotak.
+            $("#tampilkanKotak").click(function() {
+                $("#kotakWarna").show();
+            });
+        });
+    </script>
+</body>
+</html>
